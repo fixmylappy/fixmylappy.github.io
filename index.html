@@ -9,7 +9,7 @@
     <meta name="keywords" content="laptop repair Delhi, desktop repair Karol Bagh, chip-level repair, motherboard repair, screen replacement, FixMyLappy, computer repair near me">
     
     <meta property="og:title" content="FixMyLappy | Expert Laptop Repair">
-    <meta property="og:description" content="Top-rated card-level technicians in Delhi. Book a free inspection today!">
+    <meta property="og:description" content="Top-rated chip & card-level technicians in Delhi. Book a free inspection today!">
     <meta property="og:image" content="logo.jpg">
     <meta property="og:type" content="website">
 
@@ -40,8 +40,8 @@
     </script>
 
     <script src="https://cdn.jsdelivr.net/npm/canvas-confetti@1.6.0/dist/confetti.browser.min.js"></script>
+
     <link href="https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&display=swap" rel="stylesheet">
-    
     <style>
         /* --- CSS Variables for Light & Dark Mode --- */
         :root {
@@ -76,7 +76,7 @@
             }
             .header-location { color: var(--text-main); }
             
-            /* DARK MODE LOGO FIX */
+            /* TRUE LOGO FIX: Contrast(3) forces the off-white background to pure black, so screen mode deletes it completely */
             .logo-img { 
                 filter: invert(1) hue-rotate(180deg) contrast(3) brightness(1.2); 
                 mix-blend-mode: screen; 
@@ -84,7 +84,7 @@
         }
 
         @media (prefers-color-scheme: light) {
-            /* LIGHT MODE LOGO FIX: Cranks contrast heavily to blow out the off-white background to pure white, then makes it invisible */
+            /* LIGHT MODE LOGO FIX */
             .logo-img { 
                 filter: contrast(2) brightness(1.15);
                 mix-blend-mode: multiply; 
@@ -98,6 +98,7 @@
         header { background: var(--card-bg); position: sticky; top: 0; z-index: 50; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); transition: background-color 0.3s ease; width: 100%; }
         .nav-content { max-width: 1200px; margin: 0 auto; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; }
         
+        /* CLEAN LOGO CSS */
         .logo-wrapper { display: flex; align-items: center; justify-content: flex-start; }
         .logo-img { height: 90px; width: auto; object-fit: contain; } 
         
@@ -304,7 +305,7 @@
             <h1>Expert Laptop & Desktop Repair</h1>
             <div class="badges">
                 <div class="badge">⭐ 4.9 Rated</div>
-                <div class="badge">🔧 Card-Level Techs</div>
+                <div class="badge">🔧 Chip & Card-Level Techs</div>
                 <div class="badge">🖥️ Laptops & PCs</div>
             </div>
         </section>
@@ -343,7 +344,7 @@
         </div>
 
         <div class="section-title">How We Repair</div>
-        <div class="section-subtitle">Our transparent, card-level diagnostic process for Laptops & Desktops.</div>
+        <div class="section-subtitle">Our transparent, chip & card-level diagnostic process for Laptops & Desktops.</div>
         <div class="repair-timeline">
             <div class="timeline-item">
                 <div class="t-icon">🔍</div>
@@ -379,7 +380,7 @@
         <div class="reviews-container">
             <div class="review-card">
                 <div class="stars">★★★★★</div>
-                <p class="review-text">"Thought my Lenovo motherboard was completely dead. The card-level guys here fixed it at a fraction of the official store cost."</p>
+                <p class="review-text">"Thought my Lenovo motherboard was completely dead. The chip & card-level guys here fixed it at a fraction of the official store cost."</p>
                 <div class="review-author">Amit K. <span class="verified">✔ Verified</span></div>
             </div>
             <div class="review-card">
