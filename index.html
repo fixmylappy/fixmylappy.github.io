@@ -43,7 +43,7 @@
             }
             .header-location { color: var(--text-main); }
             
-            /* DARK MODE LOGO FIX */
+            /* TRUE LOGO FIX: Contrast(3) forces the off-white background to pure black, so screen mode deletes it completely */
             .logo-img { 
                 filter: invert(1) hue-rotate(180deg) contrast(3) brightness(1.2); 
                 mix-blend-mode: screen; 
@@ -51,11 +51,7 @@
         }
 
         @media (prefers-color-scheme: light) {
-            /* LIGHT MODE LOGO FIX: Pushes the off-white background to pure white, then multiplies it to make it vanish! */
-            .logo-img { 
-                filter: contrast(1.4) brightness(1.1);
-                mix-blend-mode: multiply; 
-            }
+            .logo-img { mix-blend-mode: multiply; }
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -65,6 +61,7 @@
         header { background: var(--card-bg); position: sticky; top: 0; z-index: 50; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); transition: background-color 0.3s ease; width: 100%; }
         .nav-content { max-width: 1200px; margin: 0 auto; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; }
         
+        /* CLEAN LOGO CSS */
         .logo-wrapper { display: flex; align-items: center; justify-content: flex-start; }
         .logo-img { height: 90px; width: auto; object-fit: contain; } 
         
@@ -217,10 +214,9 @@
             .section-title { font-size: 1.2rem; padding: 20px 16px 10px; }
             .section-subtitle { font-size: 0.9rem; padding: 0 16px 15px; }
 
-            /* Header Tweaks */
+            /* Mobile Header Tweaks */
             .nav-content { padding: 8px 16px; }
             .logo-img { height: 70px; } 
-            
             .header-location { font-size: 0.8rem; }
             .header-location span { font-size: 1rem !important; }
 
@@ -258,7 +254,7 @@
     <header>
         <div class="nav-content">
             <div class="logo-wrapper">
-                <img src="image_3d5c45.jpg" alt="FixMyLappy Logo" class="logo-img">
+                <img src="logo.jpg" alt="FixMyLappy Logo" class="logo-img">
             </div>
             <div class="header-location">
                 <span style="font-size: 1.4rem;">📍</span> Karol Bagh, Delhi
@@ -708,7 +704,7 @@
             document.body.style.overflow = 'auto'; 
         }
 
-        // --- 4. SUBMIT & CELEBRATE (WHATSAPP REDIRECT) ---
+        // --- 4. SUBMIT & CELEBRATE (WHATSAPP REDIRECT FIXED) ---
         document.getElementById('finalForm').addEventListener('submit', function(e) {
             e.preventDefault();
             
