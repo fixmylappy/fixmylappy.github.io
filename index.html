@@ -43,7 +43,7 @@
             }
             .header-location { color: var(--text-main); }
             
-            /* TRUE LOGO FIX: Contrast(3) forces the off-white background to pure black, so screen mode deletes it completely */
+            /* DARK MODE LOGO FIX */
             .logo-img { 
                 filter: invert(1) hue-rotate(180deg) contrast(3) brightness(1.2); 
                 mix-blend-mode: screen; 
@@ -51,7 +51,11 @@
         }
 
         @media (prefers-color-scheme: light) {
-            .logo-img { mix-blend-mode: multiply; }
+            /* LIGHT MODE LOGO FIX: Cranks contrast heavily to blow out the off-white background to pure white, then makes it invisible */
+            .logo-img { 
+                filter: contrast(2) brightness(1.15);
+                mix-blend-mode: multiply; 
+            }
         }
 
         * { box-sizing: border-box; margin: 0; padding: 0; font-family: 'Plus Jakarta Sans', sans-serif; }
@@ -61,7 +65,6 @@
         header { background: var(--card-bg); position: sticky; top: 0; z-index: 50; box-shadow: var(--shadow-sm); border-bottom: 1px solid var(--border); transition: background-color 0.3s ease; width: 100%; }
         .nav-content { max-width: 1200px; margin: 0 auto; padding: 8px 24px; display: flex; align-items: center; justify-content: space-between; }
         
-        /* CLEAN LOGO CSS */
         .logo-wrapper { display: flex; align-items: center; justify-content: flex-start; }
         .logo-img { height: 90px; width: auto; object-fit: contain; } 
         
